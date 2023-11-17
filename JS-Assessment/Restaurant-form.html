@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Booking Form</title>
+
+    <link rel="stylesheet" href="Restaurant-form.css">
+
+</head>
+
+<body>
+    <section>
+        <form id="booking">
+            <table id="booking-box">
+                <tr>
+                    <td colspan="2">
+                        <h1>Restaurant Booking Form</h1>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="booking-type">Details of Booking:</label></td>
+                    <td>
+                        <select id="booking-type" onchange="showBookingOptions()">
+                            <option value="" disabled selected>--Please select--</option>
+                            <option value="full-day">Full Day Booking</option>
+                            <option value="half-day">Half Day Booking</option>
+                            <option value="hourly">Hourly Booking</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr id="name-box">
+                    <td><label for=""> User Name :</label></td>
+                    <td><input type="text" id="username" placeholder="Enter Your Name" required></td>
+                </tr>
+                <tr id="mobile-box">
+                    <td><label for="">Mobile :</label></td>
+                    <td><input type="tel" id="mobile" placeholder="Enter Your Mobile No" required></td>
+                </tr>
+                <tr id="email-box">
+                    <td><label for="">Email :</label></td>
+                    <td><input type="email" id="email" placeholder="Enter Your Email" required></td>
+                </tr>
+                <tr id="person-box">
+                    <td><label for="">Number Of People :</label> </td>
+                    <td><input type="number" id="num-people" placeholder="People Count" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="booking-options"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit"></td>
+                </tr>
+            </table>
+            <div id="booking-box">
+        </form>
+    </section>
+
+
+</body>
+
+
+</html>
+<script src="Restaurant-booking.js"></script>
