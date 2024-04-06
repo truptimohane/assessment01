@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* #choice-booking,
+        #name,
+        #mobile,
+        #email,
+        #person {
+            display: flex;
+            margin-top: 10px;
+        } */
+
+        section {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* section {
+            display: flex;
+        } */
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>
+            <h1> Restaurants Booking Form</h1>
+        </div>
+        <form action="" id="Booking-Form">
+            <div id="choice-booking">
+                <div>Choice Of Booking:</div>
+                <div>
+                    <!-- <select id="booking-type" onchange="showBookingOptions()">
+                        <option value="" disabled selected>--Please select--</option>
+                        <option value="full-day">Full Day Booking</option>
+                        <option value="half-day">Half Day Booking</option>
+                        <option value="hourly">Hourly Booking</option>
+                    </select> -->
+                    <select name="" id="booking-type" onchange="ChoiceOfBooking()">
+                        <option value="" disabled selected>--Select Option--</option>
+                        <option value="Full-day">Full day booking</option>
+                        <option value="Half day booking">Half day booking</option>
+                        <option value="Hourly booking">Hourly booking</option>
+                    </select>
+                </div>
+            </div>
+            <div id="name">
+                <div> <label for="">User name :</label> </div>
+                <div><input type="text" id="username" placeholder="Enter Your Name" required> </div>
+            </div>
+            <div id="mobile">
+                <div><label for="">Mobile Number:</label></div>
+                <div><input type="text" placeholder="Enter Your Mobile Number" required></div>
+            </div>
+            <div id="email">
+                <div><label for="">Email:</label></div>
+                <div><input type="email" placeholder="Enter Your Email" required></div>
+            </div>
+            <div id="person">
+                <div><label for="">No Of Person.</label></div>
+                <div><input type="text" placeholder="Person Count" required></div>
+            </div>
+            <div id="booking-add-option"></div>
+            <div><button>Submit</button></div>
+        </form>
+    </section>
+
+    <script>
+        function ChoiceOfBooking() {
+            //    remove previous booking options
+            document.getElementById("booking-add-options").innerHTML = "";
+
+            var bookingType = document.getElementById("booking-type").value;
+
+            // if (bookingType = Full - day) {
+            //     //    input date show
+            //     var dateInput = document.createElement("input");
+            //     dateInput.type = "date";
+            //     dateInput.id = "date";
+            //     dateInput.required = true;
+
+            //     document.getElementById("booking-add-options").appendChild(dateInput);
+            // }
+
+            if (bookingType == "full-day") {
+                // show only date input
+                var dateInput = document.createElement("input");
+                dateInput.type = "date";
+                dateInput.id = "date";
+                dateInput.required = true;
+
+                document.getElementById("booking-add-options").appendChild(dateInput);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
